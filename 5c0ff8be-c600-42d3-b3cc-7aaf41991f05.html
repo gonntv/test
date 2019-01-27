@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>迈外迪 - 智其网，享其悦</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+                body {
+                    height: 100%;
+                    width: 100%;
+                    background: #fcfcfc;
+                    padding: 0;
+                    margin: 0;
+                }
+                img.bg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: -1;
+                }
+                .pc {
+                    margin-top: 32%;
+                    color: #bbb;
+                    text-align: center;
+                }
+                .pc button {
+                    border: solid 1px #bbb;
+                    padding-top: 10px;
+                    padding-bottom: 10px; 
+                    border-radius: 15px;
+                    text-align: center;
+                    width: 300px;
+                    background: #fcfcfc;
+                    margin-top: 80px;
+                }
+                .pc .footer {
+                    width: 100%;
+                    position: fixed;
+                    bottom: 0;
+                    margin-bottom: 50px;
+                    text-align: center;
+                }
+                .phone {
+                    margin-top: 82%;
+                    color: #bbb;
+                    text-align: center;
+                }
+                .phone button {
+                    border: solid 1px #bbb;
+                    padding-top: 10px;
+                    padding-bottom: 10px; 
+                    border-radius: 15px;
+                    text-align: center;
+                    width: 200px;
+                    background: #fcfcfc;
+                    margin-top: 40px;
+                }
+                .phone .footer {
+                    width: 100%;
+                    position: fixed;
+                    bottom: 0;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+
+                .font-orange {
+                    color: #ff8a43;
+                }
+                .font24 {
+                    font-size: 24px;
+                }
+                .font10 {
+                    font-size: 10px;
+                }
+                .mt6 {
+                    margin-top: 6px;
+                }
+                .plr {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+        </style>
+        <script type="text/javascript" src="http://static.wiwide.com/js/jquery-1.11.1.min.js" ></script>
+    </head>
+    <body>
+
+
+    <!--    10.0.1.227  -->
+
+        <img class="bg" src="http://static.wiwide.com/images/404/404-phone.jpg">
+
+        <div class="js-pc pc">
+            <div class="font-orange font24 plr">Oops，找不到认证页面了！</div>
+            <div class="font10 mt6">可能是路由器没有添加到管理后台，快快告诉商家吧</div>
+                        <a href="javascript:;" onclick="history.go(-1)" class="btn-white btn-large"><button>返回</button></a>
+                        <div class="footer">
+                <span>
+                    <img src="http://static.wiwide.com/images/404/phone.png">
+                    400-6500-311
+                </span>
+            </div>
+        </div>
+
+        <div class="js-phone phone">
+            <div class="font-orange font24 plr">Oops，找不到认证页面了！</div>
+            <div class="font10 mt6">可能是路由器没有添加到管理后台，快快告诉商家吧</div>
+                        <a href="javascript:;" onclick="history.go(-1)" class="btn-white btn-large"><button>返回</button></a>
+                        <div class="footer">
+                <span>
+                    <img src="http://static.wiwide.com/images/404/phone.png">
+                    400-6500-311
+                </span>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+        $(function() {
+            var reset = function(){
+                var width = $(this).width();
+                if (width < 720) {
+                    $('img.bg').attr('src', 'http://static.wiwide.com/images/404/404-phone.jpg');
+                    $('.js-pc').hide();
+                    $('.js-phone').show();
+                } else {
+                    $('img.bg').attr('src', 'http://static.wiwide.com/images/404/404-pc.jpg');
+                    $('.js-pc').show();
+                    $('.js-phone').hide();
+                }
+            }
+
+            $(window).resize(function() {
+                reset()
+            });
+            
+            reset();
+        });
+        </script>
+    </body>
+</html>
